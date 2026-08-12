@@ -696,17 +696,21 @@ kbd{
   .hero-actions .btn{flex:1 1 auto;min-width:0;padding:12px 14px}
   .hero-copy{max-width:100%}
   .to-top{right:14px;bottom:calc(16px + env(safe-area-inset-bottom));width:46px;height:46px}
-  .topbar-inner{padding:8px 12px calc(8px + env(safe-area-inset-top))}
+  .topbar-inner{padding:10px 12px calc(10px + env(safe-area-inset-top))}
   .brand-sub{display:none}
 }
-@media (max-width:640px){
-  html{scroll-padding-top:96px}
-  .topbar-inner{gap:10px}
-  .brand-text{min-width:0}
-  .brand-title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.92rem}
-  .top-actions{gap:6px;margin-left:auto}
+@media (max-width:860px){
+  /* icon-only actions give the brand title room on tablets + phones */
   .top-actions .btn{width:44px;height:44px;padding:0;font-size:0;border-radius:12px}
   .top-actions .btn .ic{width:18px;height:18px;margin:0}
+}
+@media (max-width:640px){
+  html{scroll-padding-top:122px}
+  .topbar-inner{gap:10px;padding:12px 12px calc(12px + env(safe-area-inset-top))}
+  .brand-text{min-width:0}
+  /* full-size title, wraps to two lines — never truncated */
+  .brand-title{white-space:normal;font-size:1.02rem;line-height:1.18;letter-spacing:-.015em}
+  .top-actions{gap:6px;margin-left:auto}
   .global-progress{flex-basis:100%;order:3;min-width:0;max-width:none}
   .diagram{overflow-x:auto}
   .diagram svg{min-width:560px}
