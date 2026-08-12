@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AI Presales Academy — Interactive Syllabus</title>
+<meta name="description" content="A 12-week interactive syllabus for the Presales AI Engineer role: AI fundamentals, RAG, GPU infrastructure, sizing, presales craft, RFP responses and mock interview prep.">
+<meta name="theme-color" content="#05070f">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="AI Presales">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='16' y='16' width='68' height='68' rx='16' fill='%230d1428' stroke='%23818cf8' stroke-width='6'/%3E%3Crect x='34' y='38' width='32' height='8' rx='4' fill='%2322d3ee'/%3E%3Crect x='34' y='54' width='32' height='8' rx='4' fill='%23818cf8'/%3E%3Crect x='34' y='70' width='20' height='8' rx='4' fill='%23e879f9'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ ICON SPRITE (Lucide-style, referenced via <use href="#i-...">) ============ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></symbol>
+  <symbol id="i-rotate" viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-chevron-right" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></symbol>
+  <symbol id="i-chevron-left" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="i-brain" viewBox="0 0 24 24"><path d="M12 4.5a2.5 2.5 0 0 0-4.96-.46 2.5 2.5 0 0 0-1.98 3 2.5 2.5 0 0 0-1.32 4.24 3 3 0 0 0 .34 5.58 2.5 2.5 0 0 0 2.96 3.08 2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 12 4.5Z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></symbol>
+  <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></symbol>
+  <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+  <symbol id="i-clipboard" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5.76.76 1.23 1.52 1.41 2.5"/></symbol>
+  <symbol id="i-puzzle" viewBox="0 0 24 24"><path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77c.24-.24.581-.353.917-.303.515.077.877.528 1.073 1.01a2.5 2.5 0 1 0 3.259-3.259c-.482-.196-.933-.558-1.01-1.073-.05-.336.062-.676.303-.917l1.525-1.525A2.402 2.402 0 0 1 12 1.998c.617 0 1.234.236 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02Z"/></symbol>
+  <symbol id="i-timer" viewBox="0 0 24 24"><line x1="10" y1="2" x2="14" y2="2"/><line x1="12" y1="14" x2="15" y2="11"/><circle cx="12" cy="14" r="8"/></symbol>
+  <symbol id="i-dice" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.3"/><circle cx="15.5" cy="8.5" r="1.3"/><circle cx="15.5" cy="15.5" r="1.3"/><circle cx="8.5" cy="15.5" r="1.3"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+  <symbol id="i-grad" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></symbol>
+  <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></symbol>
+  <symbol id="i-network" viewBox="0 0 24 24"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></symbol>
+  <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="3"/><circle cx="9" cy="13" r="1.2"/><circle cx="15" cy="13" r="1.2"/><path d="M10 17h4"/><path d="M12 8V4"/><path d="M9 4h6"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></symbol>
+  <symbol id="i-archive" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><path d="M10 12h4"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></symbol>
+  <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+  <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M10 2v6L4 20a2 2 0 0 0 1.2 2.6c.25.1.52.15.8.15h12a2 2 0 0 0 2-2 2 2 0 0 0-.2-.8L14 8V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-divide" viewBox="0 0 24 24"><circle cx="12" cy="6" r="2"/><line x1="5" y1="12" x2="19" y2="12"/><circle cx="12" cy="18" r="2"/></symbol>
+  <symbol id="i-hash" viewBox="0 0 24 24"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24"><path d="M13 4h3a2 2 0 0 1 2 2v14"/><path d="M2 20h3"/><path d="M13 20h9"/><path d="M10 12v.01"/><path d="M13 4.562v16.157a1 1 0 0 1-1.242.97L5 20V5.562a2 2 0 0 1 1.515-1.94l4-1A2 2 0 0 1 13 4.561Z"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
+</svg>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar">
+      <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg>
+    </button>
+    <div class="brand">
+      <span class="brand-logo"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-zap"/></svg></span>
+      <div class="brand-text">
+        <h1 class="brand-title">AI Presales Academy</h1>
+        <p class="brand-sub">Interactive syllabus · Presales AI Engineer</p>
+      </div>
+    </div>
+    <div class="global-progress" title="Lessons completed">
+      <div class="gp-bar"><div class="gp-fill" id="gpFill"></div></div>
+      <span class="gp-text" id="gpText">0%</span>
+    </div>
+    <div class="top-actions">
+      <button class="btn btn-ghost install-btn hidden" id="installBtn" title="Install this syllabus as an app"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-download"/></svg> Install</button>
+      <button class="btn btn-ghost" id="printBtn" title="Open print view (save as night PDF)"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-print"/></svg> Night PDF</button>
+      <button class="btn btn-ghost btn-danger" id="resetBtn" title="Clear all saved progress"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-rotate"/></svg> Reset</button>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <span class="sidebar-title">Menu</span>
+      <button class="nav-toggle nav-toggle-close" id="navClose" aria-label="Close menu" aria-expanded="false">
+        <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-x"/></svg>
+      </button>
+    </div>
+    <nav class="nav" id="nav" aria-label="Syllabus navigation"></nav>
+  </aside>
+  <div class="scrim" id="navScrim" aria-hidden="true"></div>
+
+  <!-- ============ MAIN ============ -->
+  <main class="main" id="main">
+
+    <!-- ---------- HERO ---------- -->
+    <section class="hero" id="overview">
+      <div class="hero-copy">
+        <div class="hero-badge"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-sparkles"/></svg> Built from the job description · Open to freshers → 2 yrs</div>
+        <h2 class="hero-title">Become a <span class="grad">Presales AI Engineer</span></h2>
+        <p class="hero-sub">
+          A 12-week interactive roadmap that teaches you <strong>what the job actually is</strong> — from LLMs and RAG to
+          GPU sizing, storage, networking and Kubernetes — plus the presales craft of discovery, demos, RFPs and the
+          customer meeting. Check off lessons, pass the quizzes, study flashcards, then crush the built-in mock interview.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num" id="statModules">13</span><span class="stat-label">modules</span></div>
+          <div class="stat"><span class="stat-num" id="statLessons">—</span><span class="stat-label">lessons</span></div>
+          <div class="stat"><span class="stat-num" id="statQuiz">52</span><span class="stat-label">quiz questions</span></div>
+          <div class="stat"><span class="stat-num" id="statInterview">—</span><span class="stat-label">mock interview</span></div>
+          <div class="stat"><span class="stat-num" id="statCards">—</span><span class="stat-label">flashcards</span></div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#m1">Start with Module 1 <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+          <a class="btn btn-ghost" href="#roadmap"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-map"/></svg> See the flow</a>
+          <a class="btn btn-ghost" href="#flashcards"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-refresh"/></svg> Flashcards</a>
+          <a class="btn btn-ghost" href="#interview"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-mic"/></svg> Mock Interview</a>
+          <a class="btn btn-ghost" href="#cheatsheet"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-file"/></svg> Cheat Sheet</a>
+        </div>
+
+        <p class="hero-note"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-database"/></svg> Your progress (checked lessons) is saved automatically in this browser. Works offline — just open the file.</p>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 340 300">
+          <defs>
+            <linearGradient id="chipg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#22d3ee"/><stop offset=".55" stop-color="#818cf8"/><stop offset="1" stop-color="#e879f9"/>
+            </linearGradient>
+          </defs>
+          <g class="orbit"><circle cx="308" cy="64" r="6" class="odot"/></g>
+          <g class="orbit o2"><circle cx="44" cy="232" r="4" class="odot"/></g>
+          <g class="orbit o3"><circle cx="52" cy="66" r="5" class="odot"/></g>
+          <g class="orbit o4"><circle cx="290" cy="238" r="7" class="odot"/></g>
+          <rect x="76" y="82" width="188" height="138" rx="16" class="chip-body" fill="none" stroke="url(#chipg)" stroke-width="3"/>
+          <rect x="104" y="112" width="132" height="20" rx="6" class="core-band"/>
+          <rect x="104" y="142" width="132" height="20" rx="6" class="core-band band2"/>
+          <rect x="104" y="172" width="132" height="20" rx="6" class="core-band band3"/>
+          <text x="170" y="102" text-anchor="middle" class="chip-title">GPU</text>
+          <text x="170" y="214" text-anchor="middle" class="chip-sub">tensor cores · VRAM · NVLink</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ---------- JD MAPPING ---------- -->
+    <section class="jd-section">
+      <h3 class="section-heading">Job description → syllabus mapping</h3>
+      <div class="jd-grid">
+        <div class="jd-card"><h4><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-target"/></svg> Presales &amp; Opportunity Support</h4><p>Discovery, requirement analysis, solution architecture, sizing for GPU / storage / networking.</p><div class="jd-mods"><span>M0</span><span>M9</span><span>M10</span></div></div>
+        <div class="jd-card"><h4><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-layers"/></svg> Solution Architecture &amp; Design</h4><p>End-to-end AI stack, deployment models (on-prem / private cloud / edge), HLD &amp; LLD, hardware/software BOM.</p><div class="jd-mods"><span>M3</span><span>M5–M9</span></div></div>
+        <div class="jd-card"><h4><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-users"/></svg> Partner &amp; Channel Enablement</h4><p>Training sessions, workshops, reusable demo kits, positioning guidance for partners.</p><div class="jd-mods"><span>M10</span></div></div>
+        <div class="jd-card"><h4><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-file"/></svg> Tender / RFP Engagement</h4><p>Compliance responses, technical writeups, presenting to evaluation committees.</p><div class="jd-mods"><span>M11</span></div></div>
+        <div class="jd-card"><h4><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg> Vendor &amp; Ecosystem</h4><p>Roadmap alignment with principals, field feedback, solution validation &amp; certification.</p><div class="jd-mods"><span>M5</span><span>M12</span></div></div>
+        <div class="jd-card"><h4><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-brain"/></svg> Internal Development</h4><p>AI reference architectures, knowledge sharing, go-to-market support.</p><div class="jd-mods"><span>M12</span></div></div>
+      </div>
+    </section>
+
+    <!-- ---------- LEARNING FLOW ROADMAP ---------- -->
+    <section class="roadmap-section" id="roadmap">
+      <h3 class="section-heading">The learning flow — 12 weeks, 6 phases</h3>
+      <p class="section-sub">Every module builds on the last: foundations → AI &amp; data → infrastructure → sizing → presales craft → launch. Each phase ends with a quiz and flashcards to lock it in. Click any card to jump to that module.</p>
+      <div class="roadmap" id="roadmapApp"></div>
+    </section>
+
+    <!-- ---------- SEARCH ---------- -->
+    <div class="search-row">
+      <input type="search" id="searchInput" class="search-input" aria-label="Search modules, lessons and topics" placeholder="Search modules, lessons, topics… (e.g. RAG, VRAM, NVLink, RFP)">
+      <span class="search-count" id="searchCount"></span>
+    </div>
+
+    <!-- ---------- MODULES (rendered by app.js) ---------- -->
+    <div id="modules"></div>
+
+    <!-- ---------- FLASHCARDS (SRS) ---------- -->
+    <section class="page-section" id="flashcards">
+      <div class="page-section-head">
+        <span class="section-emoji"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-refresh"/></svg></span>
+        <div>
+          <h3 class="section-heading">Spaced Repetition Flashcards</h3>
+          <p class="section-sub">Every key term from the 13 modules, scheduled with the <strong>SM-2 algorithm</strong> — each card comes back right before you're about to forget it. Grade honestly: <strong>Again</strong> = relearn in 10 min, <strong>Good</strong> = next interval, <strong>Easy</strong> = longer gap. Progress saves automatically.</p>
+        </div>
+      </div>
+      <div id="srsApp"></div>
+    </section>
+
+    <!-- ---------- INTERVIEW PREP ---------- -->
+    <section class="page-section" id="interview">
+      <div class="page-section-head">
+        <span class="section-emoji"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-mic"/></svg></span>
+        <div>
+          <h3 class="section-heading">Mock Interview</h3>
+          <p class="section-sub">Real questions a Presales AI Engineer gets asked. Read the question, think for 2 minutes, then reveal what the interviewer is probing and a strong answer structure.</p>
+        </div>
+      </div>
+      <div class="iq-filters" id="iqFilters"></div>
+      <div class="iq-card" id="iqCard" aria-live="polite"></div>
+      <div class="iq-controls">
+        <button class="btn btn-primary" id="iqNext"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-dice"/></svg> Draw a question</button>
+        <button class="btn btn-ghost" id="iqRevealProbe"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-bulb"/></svg> What they're probing</button>
+        <button class="btn btn-ghost" id="iqRevealStruct"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-puzzle"/></svg> Answer structure</button>
+        <button class="btn btn-ghost" id="iqTimerBtn"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-timer"/></svg> Start 2-min timer</button>
+        <span class="iq-timer" id="iqTimer">02:00</span>
+      </div>
+      <p class="iq-counter" id="iqCounter"></p>
+    </section>
+
+    <!-- ---------- CHEAT SHEET ---------- -->
+    <section class="page-section" id="cheatsheet">
+      <div class="page-section-head">
+        <span class="section-emoji"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-file"/></svg></span>
+        <div>
+          <h3 class="section-heading">Cheat Sheet</h3>
+          <p class="section-sub">The numbers and formulas that win sizing conversations and interviews. Bookmark this page.</p>
+        </div>
+      </div>
+
+      <div class="cs-block">
+        <h4 class="cs-title">1 · GPU spec sheet — current datacenter GPUs</h4>
+        <div class="table-wrap">
+          <table class="cs-table">
+            <thead><tr><th>GPU</th><th>VRAM</th><th>Mem bandwidth</th><th>FP16/BF16 (dense)</th><th>INT8</th><th>TDP</th><th>NVLink</th></tr></thead>
+            <tbody>
+              <tr><td>A100 SXM</td><td>80 GB HBM2e</td><td>2,039 GB/s</td><td>312 TFLOPS</td><td>624 TOPS</td><td>400 W</td><td>600 GB/s</td></tr>
+              <tr><td>H100 SXM</td><td>80 GB HBM3</td><td>3,350 GB/s</td><td>989 TFLOPS</td><td>1,979 TOPS</td><td>700 W</td><td>900 GB/s</td></tr>
+              <tr><td>H200</td><td>141 GB HBM3e</td><td>4,800 GB/s</td><td>989 TFLOPS</td><td>1,979 TOPS</td><td>700 W</td><td>900 GB/s</td></tr>
+              <tr><td>L40S</td><td>48 GB GDDR6</td><td>864 GB/s</td><td>362 TFLOPS</td><td>~733 TOPS</td><td>350 W</td><td>PCIe only</td></tr>
+              <tr><td>B200 (per GPU)</td><td>~192 GB HBM3e</td><td>~8,000 GB/s</td><td>2,250 TFLOPS</td><td>4,500 TOPS</td><td>1,000 W</td><td>1,800 GB/s</td></tr>
+              <tr><td>AMD MI300X</td><td>192 GB HBM3</td><td>5,300 GB/s</td><td>1,307 TFLOPS</td><td>2,614 TOPS</td><td>750 W</td><td>~896 GB/s</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="cs-note"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-bulb"/></svg> Specs move fast — always re-check the vendor's current datasheet before a customer meeting. Dense = non-sparse numbers.</p>
+      </div>
+
+      <div class="cs-block">
+        <h4 class="cs-title">2 · Model memory — bytes per parameter</h4>
+        <div class="table-wrap">
+          <table class="cs-table">
+            <thead><tr><th>Precision</th><th>Bytes / param</th><th>7B model</th><th>70B model</th></tr></thead>
+            <tbody>
+              <tr><td>FP32</td><td>4</td><td>~28 GB</td><td>~280 GB</td></tr>
+              <tr><td>FP16 / BF16</td><td>2</td><td>~14 GB</td><td>~140 GB</td></tr>
+              <tr><td>INT8</td><td>1</td><td>~7 GB</td><td>~70 GB</td></tr>
+              <tr><td>INT4 (GPTQ/AWQ)</td><td>0.5</td><td>~3.5–4.5 GB</td><td>~35–45 GB</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="cs-note">Rule of thumb: <strong>VRAM ≈ weights + KV cache + activations + ~20–30% headroom</strong>. A 7B FP16 model ≈ 14 GB weights → comfortably serves on one 24 GB GPU (A10, L4, 4090). A 70B FP16 ≈ 140 GB → needs 2× H100/H200, or 1× H100 quantized to INT8/FP8.</p>
+      </div>
+
+      <div class="cs-block">
+        <h4 class="cs-title">3 · KV cache formula (decode memory)</h4>
+        <div class="formula">KV bytes ≈ 2 × L × H<sub>kv</sub> × head_dim × seq_len × batch × bytes_per_elem<br>
+        <span class="formula-dim">(2 = keys + values · FP16/BF16 = 2 bytes, FP8 = 1, FP4 = 0.5)</span></div>
+        <p class="cs-note">Why it matters: long contexts + big batches blow up memory. This is why <strong>vLLM's PagedAttention</strong> and GQA (grouped-query attention) exist.</p>
+      </div>
+
+      <div class="cs-block">
+        <h4 class="cs-title">4 · Rough serving throughput (published benchmarks)</h4>
+        <ul class="cs-list">
+          <li><strong>7–8B model, single A100/H100</strong>, batch 16–32 with vLLM: <strong>~1,500 – 3,500+ tokens/sec</strong> aggregate across concurrent requests.</li>
+          <li><strong>70B model, FP8 on H100</strong> (TensorRT-LLM / vLLM): <strong>~1,800 – 6,000 tokens/sec</strong> aggregate, depends on input/output split.</li>
+          <li>Every number is a function of <strong>batch size, prompt length, generation length, and quantization</strong> — always say "it depends" and show the math.</li>
+        </ul>
+      </div>
+
+      <div class="cs-block">
+        <h4 class="cs-title">5 · Inference sizing — back-of-envelope</h4>
+        <ol class="cs-list">
+          <li><strong>Peak concurrency:</strong> users × % online × avg requests each → concurrent requests.</li>
+          <li><strong>Demand:</strong> concurrent requests × (avg prompt tokens + avg output tokens) ÷ target response seconds = tokens/sec needed.</li>
+          <li><strong>GPUs:</strong> tokens/sec needed ÷ per-GPU throughput (from §4) × safety headroom (1.5–2×).</li>
+          <li><strong>Fit check:</strong> does (weights + KV + overhead) fit in VRAM at that concurrency? If not: bigger GPU, quantize, or split tensor-parallel.</li>
+          <li><strong>Sanity:</strong> latency targets — TTFT (time to first token, &lt; 1–2 s feels instant) and TPOT (per-token time for streaming).</li>
+        </ol>
+      </div>
+
+      <div class="cs-block">
+        <h4 class="cs-title">6 · Units &amp; conversions</h4>
+        <ul class="cs-list">
+          <li>1 GB/s = 8 Gb/s · 1 GiB = 1.074 GB · ~1 token ≈ 3–4 characters ≈ 0.7 English words.</li>
+          <li>PCIe Gen5 x16 ≈ 64 GB/s · H100 NVLink ≈ 900 GB/s (≈14× PCIe) · NVSwitch connects 8 GPUs in a pod.</li>
+          <li>1 H100 ≈ 700 W → a dense rack of 8×H100 servers ≈ 40–60 kW incl. cooling → liquid cooling territory.</li>
+          <li>1 H100 80 GB ≈ 10x a full-size laptop GPU for LLM inference (rule of thumb, not gospel).</li>
+        </ul>
+      </div>
+
+      <div class="cs-block">
+        <h4 class="cs-title">7 · Presales acronyms you must know</h4>
+        <div class="acronym-grid">
+          <div class="acr"><b>PoC</b><span>Proof of Concept — small scope, agreed success criteria</span></div>
+          <div class="acr"><b>RFP / RFI / RFQ</b><span>Request for Proposal / Information / Quotation</span></div>
+          <div class="acr"><b>HLD / LLD</b><span>High-level / Low-level Design</span></div>
+          <div class="acr"><b>BOM</b><span>Bill of Materials — hardware + software + services</span></div>
+          <div class="acr"><b>TCO / ROI</b><span>Total Cost of Ownership / Return on Investment</span></div>
+          <div class="acr"><b>CapEx / OpEx</b><span>Capital vs operational expenditure</span></div>
+          <div class="acr"><b>SLA / SOW</b><span>Service-Level Agreement / Statement of Work</span></div>
+          <div class="acr"><b>TTFT / TPOT</b><span>Time To First Token / Time Per Output Token</span></div>
+          <div class="acr"><b>MEDDIC</b><span>Metrics, Economic buyer, Decision criteria, Decision process, Identify pain, Champion</span></div>
+          <div class="acr"><b>SPIN</b><span>Situation, Problem, Implication, Need-payoff questions</span></div>
+          <div class="acr"><b>STAR</b><span>Situation, Task, Action, Result — behavioral answers</span></div>
+          <div class="acr"><b>MIG / vGPU</b><span>NVIDIA GPU slicing (hardware) / virtual GPU</span></div>
+        </div>
+      </div>
+
+      <p class="cs-note"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-search"/></svg> The fastest way to look genuinely expert: <em>"That depends on your workload — let me show you the math."</em> Presales is not knowing everything; it's reasoning credibly in front of the customer.</p>
+    </section>
+
+    <footer class="footer">
+      <p>Made for the Presales AI Engineer role — learn, practice, then go win a deal.</p>
+    </footer>
+  </main>
+
+  <button class="to-top" id="toTopBtn" aria-label="Back to top" title="Back to top">
+    <svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow-up"/></svg>
+  </button>
+</div>
+
+<script src="js/data/modules-1.js"></script>
+<script src="js/data/modules-2.js"></script>
+<script src="js/data/extras.js"></script>
+<script src="js/data/diagrams.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

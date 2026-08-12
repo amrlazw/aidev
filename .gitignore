@@ -1,0 +1,3 @@
+# Local AI-assistant skill data (not part of the site)
+.agents/
+.claude/
