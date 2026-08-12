@@ -3,7 +3,7 @@
    ============================================================ */
 'use strict';
 
-var CACHE = 'paie-cache-v3';
+var CACHE = 'paie-cache-v4';
 var CORE = [
   './',
   './index.html',
