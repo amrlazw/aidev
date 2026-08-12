@@ -120,7 +120,7 @@ button,a,input,.flip,.srs-card,.rp-pill,.lesson summary,.act-steps li,.quiz-opt,
 /* ---------- top bar ---------- */
 .topbar{
   position:sticky;top:0;z-index:100;
-  background:rgba(5,7,15,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  background:#05070f;
   border-bottom:1px solid var(--border);
 }
 .topbar-inner{
@@ -696,7 +696,7 @@ kbd{
   .hero-actions .btn{flex:1 1 auto;min-width:0;padding:12px 14px}
   .hero-copy{max-width:100%}
   .to-top{right:14px;bottom:calc(16px + env(safe-area-inset-bottom));width:46px;height:46px}
-  .topbar-inner{padding:10px 12px calc(10px + env(safe-area-inset-top))}
+  .topbar-inner{padding:10px 14px calc(10px + env(safe-area-inset-top))}
   .brand-sub{display:none}
 }
 @media (max-width:860px){
@@ -706,7 +706,7 @@ kbd{
 }
 @media (max-width:640px){
   html{scroll-padding-top:122px}
-  .topbar-inner{gap:10px;padding:12px 12px calc(12px + env(safe-area-inset-top))}
+  .topbar-inner{gap:10px;padding:12px 14px calc(12px + env(safe-area-inset-top))}
   .brand-text{min-width:0}
   /* full-size title, wraps to two lines — never truncated */
   .brand-title{white-space:normal;font-size:1.02rem;line-height:1.18;letter-spacing:-.015em}
